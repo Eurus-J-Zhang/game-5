@@ -13,30 +13,45 @@
 </p>
 
 <form method="POST">
-  <div class="radio-group">
-      <input type="radio" id="happy" name="emotion" value="happy">
-      <label for="happy">Joy</label>
-      <input type="radio" id="despair" name="emotion" value="despair">
-      <label for="despair">Despair</label>
-      <input type="radio" id="rage" name="emotion" value="rage">
-      <label for="rage">Rage</label>
-  </div>
-  <br>
+  {{ form.hidden_tag() }} <!-- CSRF protection -->
 
-<p class="t_title">
-  Please explain your choice. For example: 
-  <br>Why do you feel this emotion, which part of the game makes you feel that way? 
-  And why does this emotion outweigh the other two for you?
-    <br>
-</p>
+  <!-- <div class="radio-group">
+      <div>
+          <input type="radio" id="happy" name="emotion" value="happy">
+          <label for="happy">Joy</label>
+      </div>
+      <div>
+          <input type="radio" id="despair" name="emotion" value="despair">
+          <label for="despair">Despair</label>
+      </div>
+      <div>
+          <input type="radio" id="rage" name="emotion" value="rage">
+          <label for="rage">Rage</label>
+      </div>
+  </div>
+  <br> -->
+
+  <tr>
+    <td><label></label></td>
+    <td>        {% for subfield in form.emo_choice %}
+      <label>{{ subfield }} {{ subfield.label }}</label>
+      {% endfor %}</td>
+</tr>
+
+  <p class="t_title">
+      Please explain your choice. For example:
+      <br>Why do you feel this emotion, which part of the game makes you feel that way?
+      And why does this emotion outweigh the other two for you?
+      <br>
+  </p>
   
   <div>
       {{ form.feedback.label }}
       {{ form.feedback(class="feedback-input") }}
   </div>
-<br><br>
+  <br><br>
 
-  <input type="submit" value="Submit" class = "continue-btn">
+  <input type="submit" value="Submit" class="continue-btn">
 </form>
 
 <br><br><br>

@@ -67,6 +67,8 @@ def emo():
     form = EmotionForm()
 
     result = handle_form_submission(form, 'emo_data', 'end')
+    print("Form submission result:", result)
+
     if result:
         index_data = session.get('index_data')
         final_choice = session.get('final_choice')
