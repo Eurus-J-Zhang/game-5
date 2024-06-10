@@ -11,4 +11,4 @@ class Data(db.Model):
     final_choice = db.Column(db.String(1))
 
     emo_choice = db.Column(db.String(10))
-    feedback = db.Column(db.String(600))
+    feedback = db.Column(db.String(10000))

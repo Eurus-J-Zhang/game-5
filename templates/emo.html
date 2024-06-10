@@ -15,26 +15,9 @@
 <form method="POST">
   {{ form.hidden_tag() }} <!-- CSRF protection -->
 
-  <!-- <div class="radio-group">
-      <div>
-          <input type="radio" id="happy" name="emotion" value="happy">
-          <label for="happy">Joy</label>
-      </div>
-      <div>
-          <input type="radio" id="despair" name="emotion" value="despair">
-          <label for="despair">Despair</label>
-      </div>
-      <div>
-          <input type="radio" id="rage" name="emotion" value="rage">
-          <label for="rage">Rage</label>
-      </div>
-  </div>
-  <br> -->
-
   <tr>
-    <td><label></label></td>
     <td>        {% for subfield in form.emo_choice %}
-      <label>{{ subfield }} {{ subfield.label }}</label>
+      <label class="spaced-label">{{ subfield }} <strong>{{ subfield.label }}</strong></label>
       {% endfor %}</td>
 </tr>
 

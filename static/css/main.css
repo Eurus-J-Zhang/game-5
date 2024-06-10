@@ -64,7 +64,7 @@ form {
 
 .feedback-input {
     height: 180px;
-    width: 70%;
+    width: 100%;
     font-size: 18px;
     padding-top: 5px;
     padding-left: 3px;
@@ -121,21 +121,7 @@ form {
     cursor: pointer;
   }
   
-
-
-/* .radio-group {
-    display: flex;
-    flex-direction: column;
-} */
-
-/* .radio-group div {
-    margin-bottom: 10px;
-} */
-
-.radio-group input[type="radio"] {
-    margin-left: 40px;
-}
-
- .radio-group label {
-    font-weight: bold;
-} 
+  .spaced-label {
+    margin-right: 60px; /* Adjust the value as needed */
+  }
+  
